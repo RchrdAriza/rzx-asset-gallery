@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Asset {
+  id           String   @id @default(cuid())
+  name         String
+  description  String
+  categoryId   String
+  category     Category @relation(fields: [categoryId], references: [id])
+  tags         Tag[]
+  modelUrl     String
+  thumbnailUrl String
+  format       String
+  fileSize     Int
+  downloads    Int      @default(0)
+  featured     Boolean  @default(false)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model Category {
+  id     String  @id @default(cuid())
+  name   String  @unique
+  slug   String  @unique
+  assets Asset[]
+}
+
+model Tag {
+  id     String  @id @default(cuid())
+  name   String  @unique
+  assets Asset[]
+}
