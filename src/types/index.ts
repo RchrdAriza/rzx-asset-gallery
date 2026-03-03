@@ -26,6 +26,17 @@ export interface Tag {
   name: string;
 }
 
+export interface Collection {
+  id: string;
+  name: string;
+  slug: string;
+  description: string;
+  coverUrl: string;
+  assets: Asset[];
+  createdAt: string;
+  updatedAt: string;
+}
+
 export interface AssetFormData {
   name: string;
   description: string;

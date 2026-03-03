@@ -81,6 +81,12 @@ export default function AdminDashboard() {
         </div>
         <div className="flex items-center gap-4">
           <Link
+            href="/admin/collections"
+            className="px-6 py-2.5 bg-gray-800 hover:bg-gray-700 text-white rounded-lg font-medium transition-colors"
+          >
+            Collections
+          </Link>
+          <Link
             href="/admin/upload"
             className="px-6 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
           >

@@ -73,7 +73,7 @@ export default function AssetDetailPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* 3D Viewer */}
-      <div className="relative rounded-xl overflow-hidden">
+      <div className="relative rounded-xl overflow-hidden h-[500px]">
         <ModelViewer modelUrl={asset.modelUrl} wireframe={wireframe} showGrid={showGrid} />
         <ViewerControls
           wireframe={wireframe}

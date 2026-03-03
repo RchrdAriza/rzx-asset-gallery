@@ -22,6 +22,9 @@ export default function Navbar() {
             <Link href="/gallery" className="text-gray-300 hover:text-white transition-colors">
               Gallery
             </Link>
+            <Link href="/collections" className="text-gray-300 hover:text-white transition-colors">
+              Collections
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -47,6 +50,9 @@ export default function Navbar() {
             </Link>
             <Link href="/gallery" className="block text-gray-300 hover:text-white py-2" onClick={() => setIsOpen(false)}>
               Gallery
+            </Link>
+            <Link href="/collections" className="block text-gray-300 hover:text-white py-2" onClick={() => setIsOpen(false)}>
+              Collections
             </Link>
           </div>
         )}
